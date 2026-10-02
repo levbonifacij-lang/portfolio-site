@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sample A · Sunny Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff8ec;--ink:#2b2438;--coral:#ff6b57;--sun:#ffc93c;--mint:#7fd8be;--card:#fff;--muted:#6d6578}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 'DM Sans',sans-serif}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-weight:700}
+nav a{color:var(--ink);text-decoration:none;margin-left:22px;font-weight:500}
+.hero{position:relative;padding:60px 0 80px}
+.blob{position:absolute;border-radius:50%;z-index:0}
+.b1{width:220px;height:220px;background:var(--sun);right:2%;top:10px}
+.b2{width:120px;height:120px;background:var(--mint);right:18%;top:190px}
+.b3{width:60px;height:60px;background:var(--coral);right:0;top:230px}
+.hero>*{position:relative;z-index:1}.hero>.blob{position:absolute;z-index:0}
+.kicker{display:inline-block;background:var(--ink);color:#fff;padding:4px 14px;border-radius:99px;font-size:14px;transform:rotate(-2deg)}
+h1{font:800 clamp(42px,8vw,84px)/1.02 Fraunces,serif;margin:18px 0 12px;max-width:720px}
+h1 em{font-style:normal;background:linear-gradient(transparent 60%,var(--sun) 60%)}
+.lead{max-width:600px;color:var(--muted);font-size:19px}
+.btn{display:inline-block;margin:22px 12px 0 0;padding:13px 26px;border-radius:99px;background:var(--coral);color:#fff;font-weight:700;text-decoration:none;box-shadow:4px 4px 0 var(--ink);transition:.15s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}.btn.alt{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+h2{font:800 36px Fraunces,serif;margin:70px 0 22px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.stat{background:var(--card);border:2px solid var(--ink);border-radius:22px;padding:22px;box-shadow:6px 6px 0 var(--ink)}
+.stat b{font:800 44px Fraunces,serif;color:var(--coral);display:block;line-height:1}
+.stat:nth-child(2){transform:rotate(1.2deg)}.stat:nth-child(3){transform:rotate(-1deg)}
+.job{background:var(--card);border-radius:22px;padding:22px 26px;margin-bottom:14px;border-left:10px solid var(--mint)}
+.job:nth-child(even){border-color:var(--sun)}.job h3{margin:0;font-size:19px}.job small{color:var(--muted)}
+.tags span{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:99px;padding:3px 14px;margin:0 6px 8px 0;font-size:15px}
+footer{margin:80px 0 0;background:var(--ink);color:#fff;text-align:center;padding:60px 20px;border-radius:40px 40px 0 0}
+footer a{color:var(--sun)}footer h2{margin:0 0 10px}
+</style></head><body><div class="wrap">
+<nav><span>Iryna Leuchanka ✦</span><div><a href="#">Work</a><a href="#">Experience</a><a href="#">Contact</a></div></nav>
+<header class="hero"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i>
+<span class="kicker">Learning Design Consultant</span>
+<h1>Making learning that people actually <em>enjoy</em>.</h1>
+<p class="lead">11 years designing learner-centred online and blended learning across higher education, EdTech and corporate teams. Based in Manchester, UK. Currently exploring AI in education.</p>
+<a class="btn" href="#">See my work</a><a class="btn alt" href="#">Say hello</a></header>
+<h2>Highlights</h2>
+<div class="stats"><div class="stat"><b>100k</b>downloads of an educational game in 2 months</div><div class="stat"><b>6</b>microlearning courses in six languages</div><div class="stat"><b>1M</b>employees reached through client training</div></div>
+<h2>Where I've worked</h2>
+<div class="job"><h3>Education Manager · FutureGames</h3><small>2024 – 2025</small></div>
+<div class="job"><h3>Senior Course Producer · Welltech</h3><small>2021 – 2023</small></div>
+<div class="job"><h3>Senior Content Manager · Knomary</h3><small>2020 – 2021</small></div>
+<h2>Toolbox</h2>
+<div class="tags"><span>Articulate Rise 360</span><span>Storyline</span><span>Camtasia</span><span>Figma</span><span>Canvas</span><span>Moodle</span><span>SCORM / xAPI</span><span>Claude</span><span>ElevenLabs</span></div>
+</div><footer><h2>Let's build something good.</h2><p><a href="#">ira_leu@protonmail.com</a> · <a href="#">LinkedIn</a></p></footer>
+</body></html>
