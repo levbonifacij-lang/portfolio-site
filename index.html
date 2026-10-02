@@ -4,7 +4,9 @@
 <meta name="description" content="Learning design consultant with 11 years of experience in online and blended learning, workshop facilitation and AI in education. MA, University of Manchester.">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#fbfaf7;--ink:#111;--yellow:#ffe96b;--lilac:#d8c8ff;--muted:#5f5f5f}
+:root{--paper:#fbfaf7;--ink:#111;--yellow:#ffe96b;--lilac:#d8c8ff;--muted:#5f5f5f;
+  /* Lastochki game palette, used only on the featured-project hover */
+  --g-purple:#7d5a8a;--g-pink:#e88fa3;--g-coral:#ec6652;--g-navy:#17236b}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.6 'Bricolage Grotesque',sans-serif}
@@ -38,6 +40,23 @@ p{margin:0 0 14px}
 .stats .card{display:flex;flex-direction:column;gap:6px}
 .stats b{font-size:52px;line-height:1;letter-spacing:-2px}
 
+.fg{position:relative;display:block;overflow:hidden;min-height:240px;border:2px solid var(--ink);border-radius:20px;box-shadow:5px 5px 0 var(--ink);text-decoration:none;color:var(--ink);background:var(--paper);isolation:isolate}
+.fg::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(110deg,var(--g-navy) 0%,var(--g-purple) 55%,var(--g-pink) 100%);transform:translateX(-101%);transition:transform .55s cubic-bezier(.65,0,.25,1)}
+.fg-body{position:relative;z-index:1;max-width:52%;padding:28px;transition:color .3s .1s}
+.fg-body small{display:block;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;font-size:12px;margin-bottom:10px}
+.fg-body h3{font-size:36px;letter-spacing:-1px;margin:0 0 8px}
+.fg-body h3 i{font:italic 400 1.1em/1 'Instrument Serif',serif}
+.fg-body p{margin:0 0 16px}
+.fg-cta{display:inline-block;font-weight:800;border-bottom:3px solid var(--yellow)}
+.fg-panels{position:absolute;z-index:-1;top:16px;right:16px;bottom:16px;width:42%;display:flex;gap:8px}
+.fg-panels span{flex:1;border-radius:12px;border:2px solid var(--ink);background:url(assets/lastochki/banner.jpg) no-repeat;background-size:auto 100%;transform:translateX(130%);opacity:0;transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .4s}
+.fg-panels span:nth-child(1){background-position:10% 0;transition-delay:.05s}
+.fg-panels span:nth-child(2){background-position:50% 0;transition-delay:.15s}
+.fg-panels span:nth-child(3){background-position:90% 0;transition-delay:.25s}
+.fg:hover::before,.fg:focus-visible::before{transform:none}
+.fg:hover .fg-body,.fg:focus-visible .fg-body{color:#fff}
+.fg:hover .fg-panels span,.fg:focus-visible .fg-panels span{transform:none;opacity:1}
+.fg:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
 .row{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:14px 12px;margin:0 -12px;border-bottom:1px dashed #b5b5b5;border-radius:6px}
 .row:hover{background:var(--yellow)}
 .row b{font-size:20px}
@@ -66,6 +85,16 @@ footer p{margin:6px 0}
   section{grid-template-columns:1fr;gap:16px}
   .feature,.stats{grid-template-columns:1fr}
   .row{flex-direction:column;gap:0}.row span{text-align:left}
+  .fg-body{max-width:none}
+  .fg-panels{position:relative;inset:auto;width:auto;height:150px;margin:0 16px 16px}
+}
+@media(hover:none){
+  .fg::before{transform:none}
+  .fg-body{color:#fff}
+  .fg-panels span{transform:none;opacity:1}
+}
+@media(prefers-reduced-motion:reduce){
+  .fg::before,.fg-panels span,.fg-body{transition:none}
 }
 </style></head>
 <body>
@@ -93,6 +122,17 @@ footer p{margin:6px 0}
 <p>Dissertation on AI adoption by Belarusian teachers under political and technical constraints. Panel speaker on AI in Higher Education (University of Manchester, 2026).</p>
 <p>Daily practitioner of ChatGPT, Claude (incl. Claude Code), Gemini, Copilot, Perplexity, Synthesia, HeyGen and ElevenLabs.</p></div>
 </div>
+</section>
+
+<section>
+<h2>Featured Project</h2>
+<a class="fg" href="lastochki.html" aria-label="Lastochki: read the learning design case study">
+<div class="fg-body"><small>Case study · Game-based learning</small>
+<h3><i>Lastochki</i></h3>
+<p>A free educational mobile game that teaches girls in Kyrgyzstan to recognise and respond to bride kidnapping. 100,000 downloads in two months, with independent research showing attitude change.</p>
+<span class="fg-cta">Read the case study →</span></div>
+<div class="fg-panels" aria-hidden="true"><span></span><span></span><span></span></div>
+</a>
 </section>
 
 <section>
